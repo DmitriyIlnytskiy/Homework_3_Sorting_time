@@ -19,7 +19,7 @@ public class Main {
                 originalArray[i] = rand.nextInt(100000); // Random numbers
             }
 
-            // --- Bubble Sort ---
+            //  Bubble Sort
             int[] bubbleArray = Arrays.copyOf(originalArray, size);
             long startBubble = System.nanoTime();
             long bubbleComps = bubbleSort(bubbleArray);
@@ -27,7 +27,7 @@ public class Main {
             double bubbleTime = (endBubble - startBubble) / 1_000_000.0;
             System.out.printf("%d\tBubble\t\t%.2f\t\t%d\n", size, bubbleTime, bubbleComps);
 
-            // --- Selection Sort ---
+            //  Selection Sort
             int[] selectionArray = Arrays.copyOf(originalArray, size);
             long startSelection = System.nanoTime();
             long selectionComps = selectionSort(selectionArray);
@@ -35,7 +35,7 @@ public class Main {
             double selectionTime = (endSelection - startSelection) / 1_000_000.0;
             System.out.printf("%d\tSelection\t%.2f\t\t%d\n", size, selectionTime, selectionComps);
 
-            // --- Insertion Sort ---
+            //  Insertion Sort
             int[] insertionArray = Arrays.copyOf(originalArray, size);
             long startInsertion = System.nanoTime();
             long insertionComps = insertionSort(insertionArray);
